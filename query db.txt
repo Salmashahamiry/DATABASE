@@ -1,0 +1,21 @@
+    PRIMARY KEY (ID)
+
+ALTER TABLE ordera
+DROP COLUMN column_name;
+
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+
+CREATE TABLE Orders (
+    Order_ID int NOT NULL,
+    OrderNumber int NOT NULL,
+    CUSTOMER_ID int,
+    PRIMARY KEY (Order_ID),
+    FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMER(CUSTOMER_ID)
+);
